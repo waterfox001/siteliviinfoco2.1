@@ -1,0 +1,8 @@
+{
+  "name": "Remix Live In Foco — Estúdio Fotográfico \u0026 Eventos 2.0",
+  "description": "Estúdio fotográfico e fotografia de eventos em Caucaia e Fortaleza com mais de três décadas de história familiar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

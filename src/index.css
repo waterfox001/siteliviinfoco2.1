@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-logo: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  :root, html.dark {
+    color-scheme: dark;
+    --bg-main: #0a0a0a;
+    --bg-surface: #121212;
+    --bg-surface-elevated: #1a1a1a;
+    --border-main: #262626;
+    --border-accent: #333333;
+    --text-primary: #ffffff;
+    --text-secondary: #a3a3a3;
+    --whatsapp-green: #25d366;
+  }
+
+  html.light {
+    color-scheme: light;
+    --bg-main: #ffffff;
+    --bg-surface: #f7f7f7;
+    --bg-surface-elevated: #efefef;
+    --border-main: #e0e0e0;
+    --border-accent: #cccccc;
+    --text-primary: #121212;
+    --text-secondary: #4a4a4a;
+    --whatsapp-green: #25d366;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.dark,
+  html.dark body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
+
+  html.light,
+  html.light body,
+  html.light #root {
+    background-color: #ffffff;
+    color: #121212;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* FAQ Accordion Styling: Questions always visible, high contrast, clean state toggling */
+  html.light #faq button {
+    color: #121212;
+  }
+
+  html.light #faq button span {
+    color: #121212;
+  }
+
+  html.light #faq p {
+    color: #333333;
+  }
+
+  /* Video player containers must remain true black for crisp presentation */
+  video {
+    background-color: #000000;
+  }
+
+  /* Light Theme Form Controls */
+  html.light input,
+  html.light textarea,
+  html.light select {
+    background-color: #ffffff;
+    color: #121212;
+    border-color: #cccccc;
+  }
+
+  html.light input::placeholder,
+  html.light textarea::placeholder {
+    color: #888888;
+  }
+
+  /* Modal Scrim in Neutral Monochrome */
+  .modal-scrim-dark {
+    background-color: rgba(10, 10, 10, 0.88);
+  }
+}
